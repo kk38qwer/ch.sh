@@ -16,7 +16,7 @@ do
 		n=0
 		i=$[($RANDOM*2+1)%255]
 		n=$[$n+1]
-		ping -c 30 -i 0.2 -n -q 1.0.0.$i > icmp/$n.log&
+		ping -c 30 -i 0.2 -n -q 1.0.0.1 > icmp/$n.log&
 		per=$n*100/2847
 		while true
 		do
@@ -32,7 +32,7 @@ do
 		done
 		i=$[($RANDOM*2+1)%255]
 		n=$[$n+1]
-		ping -c 30 -i 0.2 -n -q 1.1.1.$i > icmp/$n.log&
+		ping -c 30 -i 0.2 -n -q 1.1.1.1 > icmp/$n.log&
 		per=$n*100/2847
 		while true
 		do
