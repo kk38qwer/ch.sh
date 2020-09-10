@@ -542,7 +542,7 @@ do
 				break
 			fi
 		done
-		cat icmp/*.log | sed -n '3~5p;4~5p' | sed -n '{N;s/\n/\t/p}' | cut -f1 -d'%' | awk '{print $2,$NF}' | sort -k 2 -n | awk '{print $1}' | sed '101,$d' > ip.txt
+		cat icmp/*.log | sed -n '3~5p;4~5p' | sed -n '{N;s/\n/\t/p}' | cut -f1 -d'%' | awk '{print $2,$NF}' | sort -k 2 -n | awk '{print $1}' | sed '8,$d' > ip.txt
 		rm -rf icmp
 		echo 选取100个丢包率最少的IP地址下载测速
 		mkdir temp
